@@ -123,15 +123,10 @@ namespace Lb2
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             string id = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value + ""; //дізнаємось ідентифікатор
-
             if (id != "")
-
             {
-
                 run_query("DELETE FROM `users` WHERE `Id`=" + id + ";");// виконуємо запит
-
                 fill_grid("SELECT * FROM `users`;", dataGridView1); // оновлюємо дані на сітці
-
             }
         }
 

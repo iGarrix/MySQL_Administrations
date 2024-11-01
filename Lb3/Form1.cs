@@ -33,12 +33,14 @@ namespace Lb3
 
         private void читачіToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form2 f2 = new Form2(this.con);
+            f2.ShowDialog();
         }
 
         private void книгиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form3 f3 = new Form3(this.con);
+            f3.ShowDialog();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
