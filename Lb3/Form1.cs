@@ -1,0 +1,49 @@
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Lb3
+{
+    public partial class Form1 : Form
+    {
+        private readonly MySqlConnectionStringBuilder ms;
+        private readonly MySqlConnection con;
+
+        public Form1()
+        {
+            ms = new MySqlConnectionStringBuilder
+            {
+                UserID = "root",
+                Password = "123123123",
+                Database = "sql_administration_lb1",
+                Server = @"127.0.0.1"
+            };
+            con = new MySqlConnection(ms.ConnectionString);
+
+            InitializeComponent();
+            con.Open();
+        }
+
+        private void читачіToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void книгиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            con.Close();
+        }
+    }
+}
